@@ -12,7 +12,7 @@ from urllib.parse import urljoin
 from docx import Document
 
 class WebHopperSearch:
-    def __init__(self, start_url, goal_keyword, max_depth=3):
+    def __init__(self, start_url, goal_keyword, max_depth=5):
         self.start_url = start_url
         self.goal_keyword = goal_keyword
         self.max_depth = max_depth
