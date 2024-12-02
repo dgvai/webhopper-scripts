@@ -13,5 +13,5 @@ python3 webhopper-script.py
 ```
 ### Greedy Search Script
 ```bash
-python3 webhopper-greedy-search.py
+python3 webhopper-greedy-search.py "keyword to search"
 ```

@@ -10,6 +10,7 @@ import emoji
 from collections import deque
 from urllib.parse import urljoin
 from docx import Document
+import sys
 
 class WebHopperSearch:
     def __init__(self, start_url, goal_keyword, max_depth=5):
@@ -90,6 +91,10 @@ if __name__ == "__main__":
     # set the root domain to crawl
     DOMAIN = "https://webhopper-client.vercel.app"
     
-    goal_keyword = "human intervention"
-    webhopper_search = WebHopperSearch(DOMAIN, goal_keyword)
-    webhopper_search.crawl()
+    if len(sys.argv) > 1:
+        goal_keyword = sys.argv[1]
+        webhopper_search = WebHopperSearch(DOMAIN, goal_keyword)
+        webhopper_search.crawl()
+    else:
+        print("No goal keyword provided.")
+    
